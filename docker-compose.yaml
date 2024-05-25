@@ -1,0 +1,8 @@
+version: "2"
+services:
+  webapp:
+    ports:
+      - "3001:3000"
+    image: "node:app"
+    tty: true
+    container_name: "node1"
