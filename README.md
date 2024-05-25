@@ -107,6 +107,6 @@ docker-compose up --remove-orphans --detach
 ### Check the server 
 Open your browser and type :
 ```
-localhost:3000
+localhost:3001
 ```
 
