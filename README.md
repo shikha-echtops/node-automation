@@ -5,7 +5,9 @@ Simple node.js app that servers "hello world"
 
 Great for testing simple deployments to the cloud
 # Create Docker files
-`sudo nano docker-compose.yaml`
+```
+sudo nano docker-compose.yaml
+```
 ### Add this in file 
 ```
 version: "2"
@@ -17,7 +19,9 @@ services:
     tty: true
     container_name: "node1"
 ```
-`sudo nano Dockerfile`
+```
+sudo nano Dockerfile
+```
 In docker file write this:
 ```
 FROM node
@@ -44,7 +48,9 @@ server.listen(port, () => {
 });
 ```
 ###  Create packages file 
-`nano package-lock.json`
+```
+nano package-lock.json
+```
 ```
 {
   "name": "papa-node-hello-000",
@@ -52,7 +58,9 @@ server.listen(port, () => {
   "lockfileVersion": 1
 }
 ```
-`nano package.json`
+```
+nano package.json
+```
 ```
 {
   "name": "node-hello",
@@ -77,7 +85,9 @@ server.listen(port, () => {
 ```
 
 ## Write script to run docker files
-`nano docker.sh`
+```
+nano docker.sh
+```
 ```
 #! /bin/bash
 docker-compose down 
@@ -86,8 +96,17 @@ docker build -t node:app .
 docker-compose up --remove-orphans --detach
 ```
 ### Run the script
-``` ./docker.sh   ```
+```
+./docker.sh
+```
 
 ## Run It
 
 `npm start`
+
+### Check the server 
+Open your browser and type :
+```
+localhost:3000
+```
+
